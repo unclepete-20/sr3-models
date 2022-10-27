@@ -2,14 +2,14 @@ from bmp_renderer import Render
 from Obj import Obj
 
 frame = Render()
-model = Obj('koenigsegg.obj')
+model = Obj('dog.obj')
 
-scale_factor = (0.1, 0.1)
-translate_factor = (0.000000000008, 0.000000000008)
+scale_factor = (0.16, 0.16)
+translate_factor = (-0.2, -0.2)
 
-frame.glCreateWindow(1024, 1024)
+frame.glCreateWindow(800, 800)
 
-frame.glViewPort(80, -200, 900, 900)
+frame.glViewPort(80, -200, 800, 800)
 
 frame.glClear()
 
@@ -57,7 +57,7 @@ for face in model.faces:
         frame.glLine(v3[0], v3[1], v1[0], v1[1])
     
 
-frame.glFinish('car.bmp')
+frame.glFinish('dog.bmp')
 
 '''
 square = [
